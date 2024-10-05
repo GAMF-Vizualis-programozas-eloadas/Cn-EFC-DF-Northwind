@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<efcore context-namespace="Northwind" namespace="Northwind" p1:name="cnNorthwind" p1:Guid="230794b4-313f-4bd6-9aae-b7ea59aae49f" xmlns:p1="http://devart.com/schemas/EntityDeveloper/1.0">
+  <class name="Category" entity-set="Categories" table="Categories" schema="dbo" p1:Guid="31eba906-2146-43d7-a2f6-b0751334d1a4">
+    <id name="CategoryID" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="0221086b-b56e-42b6-b3df-d0819f0cc686">
+      <column name="CategoryID" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="CategoryName" type="String" p1:ValidateMaxLength="15" p1:ValidateRequired="true" p1:Guid="8f58c761-e39c-4ffd-aec0-6bac1b46191f">
+      <column name="CategoryName" not-null="True" length="15" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="Description" type="Clob" p1:nullable="True" p1:ValidateMaxLength="1073741823" p1:ValidateRequired="false" p1:Guid="2135963c-a162-41a3-a7ac-afb738ca4f01">
+      <column name="Description" not-null="False" length="1073741823" sql-type="ntext" p1:unicode="True" />
+    </property>
+    <property name="Picture" type="Blob" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="4fd82733-73e6-40cb-b5f1-468037c3ed9c">
+      <column name="Picture" not-null="False" length="2147483647" sql-type="image" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="Product" entity-set="Products" table="Products" schema="dbo" p1:Guid="4f33f7a0-8420-4f28-88a8-c8266ddaa026">
+    <id name="ProductID" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="2ffd38fe-a45b-44f5-8b93-b9ee6467b61e">
+      <column name="ProductID" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="ProductName" type="String" p1:ValidateMaxLength="40" p1:ValidateRequired="true" p1:Guid="5b5e5c51-8d0d-4848-b42a-85a1f0ebba71">
+      <column name="ProductName" not-null="True" length="40" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="SupplierID" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="e230cfbf-1055-4061-98e6-4af476b16e1f">
+      <column name="SupplierID" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="CategoryID" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="b54d5fc2-e6ce-474e-84db-3512edfa4332">
+      <column name="CategoryID" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="QuantityPerUnit" type="String" p1:nullable="True" p1:ValidateMaxLength="20" p1:ValidateRequired="false" p1:Guid="9834bccb-fee5-4dd6-b087-4fd3b1a04d65">
+      <column name="QuantityPerUnit" not-null="False" length="20" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="UnitPrice" type="Decimal" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="8b3a2e94-7c55-46f0-b185-387fb0899093">
+      <column name="UnitPrice" default="0" not-null="False" precision="19" scale="4" sql-type="money" p1:unicode="False" />
+    </property>
+    <property name="UnitsInStock" type="Int16" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="615a9a88-e793-4cac-89e9-c67c77e9831e">
+      <column name="UnitsInStock" default="0" not-null="False" precision="5" scale="0" sql-type="smallint" p1:unicode="False" />
+    </property>
+    <property name="UnitsOnOrder" type="Int16" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="620d925a-5baa-49cd-a336-88d0eeb2a057">
+      <column name="UnitsOnOrder" default="0" not-null="False" precision="5" scale="0" sql-type="smallint" p1:unicode="False" />
+    </property>
+    <property name="ReorderLevel" type="Int16" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="8cf56b65-420b-483f-885f-74dbfdc269c4">
+      <column name="ReorderLevel" default="0" not-null="False" precision="5" scale="0" sql-type="smallint" p1:unicode="False" />
+    </property>
+    <property name="Discontinued" type="Boolean" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="db32478a-ac1e-4252-8080-c1b95bae9871">
+      <column name="Discontinued" default="0" not-null="True" sql-type="bit" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="Supplier" entity-set="Suppliers" table="Suppliers" schema="dbo" p1:Guid="475e28a1-662a-4a5e-ae2d-d2a23a8e5c21">
+    <id name="SupplierID" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="5858b26b-7736-4eb1-b22d-2eaad7c89033">
+      <column name="SupplierID" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="CompanyName" type="String" p1:ValidateMaxLength="40" p1:ValidateRequired="true" p1:Guid="a945daec-edc5-4674-a916-02017bcf6093">
+      <column name="CompanyName" not-null="True" length="40" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="ContactName" type="String" p1:nullable="True" p1:ValidateMaxLength="30" p1:ValidateRequired="false" p1:Guid="4920b0a2-1c53-4cb6-be4b-d3d55f7a6171">
+      <column name="ContactName" not-null="False" length="30" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="ContactTitle" type="String" p1:nullable="True" p1:ValidateMaxLength="30" p1:ValidateRequired="false" p1:Guid="2863f6c4-f012-4d0f-8423-0eb9ae5ec5fd">
+      <column name="ContactTitle" not-null="False" length="30" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="Address" type="String" p1:nullable="True" p1:ValidateMaxLength="60" p1:ValidateRequired="false" p1:Guid="3d306c06-9541-4258-bca2-1cf71c31c987">
+      <column name="Address" not-null="False" length="60" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="City" type="String" p1:nullable="True" p1:ValidateMaxLength="15" p1:ValidateRequired="false" p1:Guid="adbc0dbf-f318-47a5-987a-c5ac214af448">
+      <column name="City" not-null="False" length="15" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="Region" type="String" p1:nullable="True" p1:ValidateMaxLength="15" p1:ValidateRequired="false" p1:Guid="9f01b592-e768-4ab2-a5c7-26936a20616a">
+      <column name="Region" not-null="False" length="15" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="PostalCode" type="String" p1:nullable="True" p1:ValidateMaxLength="10" p1:ValidateRequired="false" p1:Guid="af870941-807f-4b46-a7bd-57baa535fbc4">
+      <column name="PostalCode" not-null="False" length="10" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="Country" type="String" p1:nullable="True" p1:ValidateMaxLength="15" p1:ValidateRequired="false" p1:Guid="d8fcda68-2689-474e-a024-966ca56546f5">
+      <column name="Country" not-null="False" length="15" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="Phone" type="String" p1:nullable="True" p1:ValidateMaxLength="24" p1:ValidateRequired="false" p1:Guid="e58147a4-48cd-4301-b928-48bf54412895">
+      <column name="Phone" not-null="False" length="24" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="Fax" type="String" p1:nullable="True" p1:ValidateMaxLength="24" p1:ValidateRequired="false" p1:Guid="643259c3-b9d8-42c1-9205-cba12f84ebe8">
+      <column name="Fax" not-null="False" length="24" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="HomePage" type="Clob" p1:nullable="True" p1:ValidateMaxLength="1073741823" p1:ValidateRequired="false" p1:Guid="fa825cb7-f1f4-4523-a864-aa24824052ec">
+      <column name="HomePage" not-null="False" length="1073741823" sql-type="ntext" p1:unicode="True" />
+    </property>
+  </class>
+  <associations>
+    <association name="Category_Product" cardinality="OneToMany" p1:Guid="b1cc6fb3-ebb1-4250-9fdd-a8e9655383f2">
+      <end1 multiplicity="ZeroOrOne" name="Category" class="Product" relation-class="Category" constrained="True" lazy="False" p1:Guid="1d1fc2a4-0cdf-47af-be36-cb38e089607e">
+        <property name="CategoryID" />
+      </end1>
+      <end2 multiplicity="Many" name="Products" class="Category" relation-class="Product" lazy="False" p1:Guid="2a3e1412-a8f1-462b-b402-b4e6b82f14de">
+        <property name="CategoryID" />
+      </end2>
+    </association>
+    <association name="Supplier_Product" cardinality="OneToMany" p1:Guid="ca324215-32e9-494f-9e2b-98202fc8684b">
+      <end1 multiplicity="ZeroOrOne" name="Supplier" class="Product" relation-class="Supplier" constrained="True" lazy="False" p1:Guid="66811235-5b98-40dc-bd70-40e648197d35">
+        <property name="SupplierID" />
+      </end1>
+      <end2 multiplicity="Many" name="Products" class="Supplier" relation-class="Product" lazy="False" p1:Guid="a757176c-0803-482f-9dd0-57927da65b1b">
+        <property name="SupplierID" />
+      </end2>
+    </association>
+  </associations>
+</efcore>
